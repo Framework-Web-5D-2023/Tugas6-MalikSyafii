@@ -33,4 +33,9 @@ class MahasiswaModel extends Model
   {
     return $this->insert($data);
   }
+
+  public function updateMahasiswa($id, $data)
+  {
+    return $this->update($id, $data);
+  }
 }

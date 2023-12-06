@@ -104,13 +104,14 @@ class Home extends BaseController
       'nama' => [
         'rules' => 'required|is_unique[mahasiswa.nama]',
         'error' => [
-          'required' => '{field} must been inputed form'
+          'required' => '{field} must been inputed form',
+          'is_unique' => 'sudah digunakan',
         ]
       ],
       'npm' => 'required',
       'prodi' => 'required',
       'minat' => 'required',
-      'domisili' => 'required',
+      // 'domisili' => 'required',
       'jenis_kelamin' => 'required'
     ])) {
       return redirect()->to(base_url("updateMahasiswa/" . $id))->withInput();
